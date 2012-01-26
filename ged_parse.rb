@@ -29,9 +29,9 @@ module GedParse
         last_val = last_detail[:value]
         last_root = last_detail[:root]
         if tag == 'CONT'
-          last_detail[:value] = [last_val.to_s + "\n" + val.to_s]
+          last_detail[:value] = last_val.to_s + "\n" + val.to_s
         elsif tag == 'CONC'
-          last_detail[:value] = [last_val.to_s + val.to_s] 
+          last_detail[:value] = last_val.to_s + val.to_s
         else
           if level > last_level
             h = {}
